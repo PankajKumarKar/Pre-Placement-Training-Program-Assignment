@@ -1,0 +1,83 @@
+/*
+1. Explain all the CSS positions(static, fixed, sticky, relative, absolute) with one code example each
+*/
+
+Ans:-
+1.Static Position:-
+The static position is the default positioning behavior of an element. Elements with a static position are positioned according to the normal flow of the document. They are not affected by the top, bottom, left, or right properties.
+Example:-
+
+html
+
+<div class="static-example">
+  This is a static positioned element.
+</div>
+css
+
+.static-example {
+  position: static;
+}
+2.Fixed Position:-
+An element with a fixed position is positioned relative to the viewport. It remains fixed in its position even if the page is scrolled. Fixed elements do not scroll with the rest of the page.
+Example:-
+
+html
+
+<div class="fixed-example">
+  This is a fixed positioned element.
+</div>
+css
+
+.fixed-example {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+3.Sticky Position:-
+The sticky position is a mix of relative and fixed positioning. An element with sticky position behaves like a relatively positioned element within its parent, until a certain scroll threshold is reached. Then it becomes fixed to the viewport.
+Example:-
+
+html
+
+<div class="sticky-example">
+  This is a sticky positioned element.
+</div>
+css
+
+.sticky-example {
+  position: sticky;
+  top: 50px;
+}
+
+4.Relative Position:-
+An element with a relative position is positioned relative to its normal position. It allows you to specify how the element should be positioned from its original position using the top, bottom, left, and right properties.
+Example:-
+
+html
+
+<div class="relative-example">
+  This is a relatively positioned element.
+</div>
+css
+
+.relative-example {
+  position: relative;
+  left: 50px;
+  top: 20px;
+}
+5.Absolute Position:-
+An element with an absolute position is positioned relative to its nearest positioned ancestor (if any), otherwise relative to the initial containing block (usually the document body). It is taken out of the normal flow of the document.
+Example:-
+
+html
+
+<div class="absolute-example">
+  This is an absolutely positioned element.
+</div>
+css
+
+.absolute-example {
+  position: absolute;
+  top: 100px;
+  left: 200px;
+}

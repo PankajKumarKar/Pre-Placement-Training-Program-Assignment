@@ -1,0 +1,50 @@
+/*
+3. Explain what is execution context in detail with diagram.
+*/
+
+
+Ans:-
+Execution context refers to the environment in which JavaScript code is executed. It includes the variables, functions, objects, and the scope chain that are accessible at a particular point during the execution of code. Each time a function is called, a new execution context is created and pushed onto the execution stack.
+
+To better understand the concept of execution context, let's dive into its components and how they interact with each other. Here's a detailed explanation along with a diagram:
+
+1.Global Execution Context:-
+The global execution context is the default and outermost context that is created when the JavaScript code starts running. It consists of two main components:
+
+a. Global Object: In a web browser, the global object is the window object. It provides access to global variables and functions.
+
+b. Global Scope: The global scope contains variables and functions that are accessible throughout the entire code.
+
+2.Function Execution Context:-
+Whenever a function is invoked, a new execution context is created for that function. It has its own components:
+
+a. Function Scope: The function scope includes the function's arguments, local variables, and inner functions. It determines the accessibility and visibility of variables within the function.
+
+b. Scope Chain: The scope chain is a list of all the available scopes at the time of execution. It is used to resolve variable references during the function's execution. The scope chain is formed by the function's own scope and the scopes of its outer functions.
+
+c. Variable Environment: The variable environment is a reference to the environment where the variables and function declarations are stored. It includes the function's arguments, local variables, and function declarations.
+
+d. This Value: The this value refers to the object that the function is bound to or the value of this in the current context.
+
+3.Execution Stack:-
+The execution stack, also known as the "call stack," is a stack data structure that tracks the order in which function calls are made and their respective execution contexts. It follows the Last-In-First-Out (LIFO) principle. The topmost execution context on the stack represents the currently executing function.
+
+4.Execution Process:-
+When JavaScript code starts running, the global execution context is created and pushed onto the execution stack. As functions are called, new execution contexts are created and stacked on top of the global execution context. When a function completes its execution, its execution context is popped from the stack, and the control returns to the previous context.
+
+Here's a simplified diagram representing the execution context and the execution stack:-
+
+
+----------------------------------------------
+|         Execution Stack (top to bottom)     |
+----------------------------------------------
+|          Function Execution Context         |
+----------------------------------------------
+|          Function Execution Context         |
+----------------------------------------------
+|           Global Execution Context          |
+
+----------------------------------------------
+
+
+As the diagram shows, the topmost execution context in the stack is the one currently being executed. Once it completes, it is removed from the stack, and the control goes back to the previous context.
