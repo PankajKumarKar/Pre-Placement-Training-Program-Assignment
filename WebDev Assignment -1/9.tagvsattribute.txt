@@ -1,0 +1,43 @@
+/*
+9 What’s the difference between html tag and attribute and give example of some global attributes?
+*/
+
+Ans:-
+In HTML, there is a distinction between tags and attributes:-
+
+HTML Tags: HTML tags are the elements that define the structure and content of an HTML document. Tags are enclosed in angle brackets (< and >) and typically come in pairs with an opening tag and a closing tag. Examples of HTML tags include <p>, <div>, <h1>, <ul>, and so on. Tags define the type of element and its purpose within the document structure.
+
+HTML Attributes: HTML attributes provide additional information or properties to HTML elements. They are specified within the opening tag of an element and provide extra details or behaviors to modify the element's default behavior. Attributes are composed of a name and a value, separated by an equals sign (=). Some attributes do not require a value and are called boolean attributes, where their presence alone is enough to enable the associated behavior. Attributes can be used to control the appearance, behavior, or functionality of HTML elements.
+
+
+
+Example of some Global Attributes (applicable to most HTML elements):-
+
+
+class: Specifies one or more class names for an element, allowing CSS and JavaScript to target and style elements based on their class.
+
+id: Specifies a unique identifier for an element, which can be used to target and manipulate the element via CSS or JavaScript.
+
+style: Inline attribute that defines CSS styles to be applied to an element.
+
+title: Provides additional information or a tooltip for an element when the user hovers over it.
+
+data-*: Custom attributes prefixed with "data-" that allow developers to store custom data within an element for scripting or styling purposes.
+
+aria-*: Attributes that define properties for accessibility purposes, providing additional information to assistive technologies.
+
+tabindex: Specifies the tabbing order of an element when navigating using the keyboard.
+role: Defines the role or purpose of an element in an accessible manner.
+
+Here's an example that demonstrates the use of some global attributes:-
+
+html
+
+<div class="container" id="myContainer" style="color: blue;" title="This is a container">
+  <p data-custom="value">This is a paragraph.</p>
+  <button tabindex="0" role="button">Click me</button>
+</div>
+
+In the above example, we have a <div> element with the class, id, style, and title attributes. The <p> element has a custom data-* attribute, and the <button> element has the tabindex and role attributes applied.
+
+Please note that the availability and usage of attributes may vary depending on the specific HTML element and its purpose.

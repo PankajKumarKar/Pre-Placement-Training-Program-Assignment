@@ -1,0 +1,28 @@
+/*
+2 Explain Semantic tags in html? And why do we need it?
+*/
+
+Ans:-
+Semantic tags in HTML are elements that provide meaning and context to the structure and content of a web page. They convey information about the purpose or role of the content they wrap, making it more accessible to both humans and machines (e.g., search engines, screen readers). Semantic tags help define the hierarchy and relationships between different parts of a webpage.
+
+Here are a few examples of semantic tags introduced in HTML5:
+
+1.<header>: Represents the introductory section or a container for the site's header.
+2.<nav>: Defines a section of navigation links.
+3.<main>: Specifies the main content of the document.
+4.<article>: Represents a self-contained composition, such as a blog post or news article.
+5.<section>: Defines a thematic grouping of content within the document.
+6.<aside>: Represents content related to the main content but can be considered separate.
+7.<footer>: Represents the footer of a document or a section.
+
+Using semantic tags offers several benefits:-
+
+1.Accessibility: Semantic tags provide meaningful structure to web content, which aids screen readers and other assistive technologies in understanding and navigating the page.
+
+2.Search engine optimization (SEO): Search engines can better understand the content and context of your web page when semantic tags are used. This can improve the page's visibility and search ranking.
+
+3.Maintainability and readability: Semantic tags make the HTML code more self-explanatory and easier to understand for developers, improving code maintainability and collaboration.
+
+4.Future compatibility: Semantic tags are designed to be forward-compatible, meaning they are less likely to become deprecated and will continue to be supported in future versions of HTML.
+
+In summary, semantic tags enhance the structure, accessibility, and search engine optimization of web pages. They improve the overall quality and maintainability of code while ensuring a better user experience for both humans and machines.

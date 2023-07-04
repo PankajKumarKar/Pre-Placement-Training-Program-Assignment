@@ -1,0 +1,10 @@
+/*
+1.<!DOCTYPE html> is it a tag of html? If not, what is it and why do we use it?
+*/
+
+Ans:-
+<!DOCTYPE html> is not a tag in HTML. It is called a Document Type Declaration (DTD) and is used to specify the version of HTML or XHTML that the document is written in. It informs the browser about the type of markup language used in the document.
+
+The <!DOCTYPE html> declaration is specifically used for HTML5. It tells the browser to interpret the document as HTML5 and enables the browser to render the content according to the HTML5 specifications. Including this declaration at the beginning of an HTML document ensures that the browser will handle the page in standards-compliant mode.
+
+By using <!DOCTYPE html>, you are essentially instructing the browser to treat the document as an HTML5 document, enabling the use of HTML5 features and ensuring consistent rendering across different browsers. It is considered good practice to include this declaration at the beginning of your HTML documents.
