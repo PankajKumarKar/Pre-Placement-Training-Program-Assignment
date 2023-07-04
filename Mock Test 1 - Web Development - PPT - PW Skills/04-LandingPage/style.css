@@ -227,39 +227,6 @@ button:active {
     cursor: pointer;
 }
 
-@media screen and (min-width: 1000px) and (max-width: 1500px) {
-    /* CSS rules to apply for screens between 1000px and 1500px */
-    .leftContainer{
-        display: none;
-    }
-    .centerLogo{
-        margin-left: 4%;
-    }
-    #menu{
-        display: inline-block;
-    }
-    .rightContainer p{
-        display: none;
-    }
-}
 
-@media screen and (max-width: 1000px) {
-    /* CSS rules to apply for screens with a maximum width of 1000px */
-    .leftContainer{
-        display: none;
-    }
-    .centerLogo{
-        margin-left: 4%;
-    }
-    #menu{
-        display: inline-block;
-    }
-    .rightContainer {
-        display: none;
-    }
-    #menu2{
-        display: inline-block;
-    }
-}
-  
+
 
