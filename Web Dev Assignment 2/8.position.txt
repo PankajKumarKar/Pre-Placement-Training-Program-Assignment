@@ -1,0 +1,58 @@
+/*
+8 Difference between absolute and relative and sticky and fixed position explain with example.
+*/
+Ans:-
+The differences between absolute and relative positioning, as well as sticky and fixed positioning, lie in how elements are positioned within the document flow and how they interact with scrolling. Here's an explanation of each position type with examples:
+
+1.Absolute Positioning:
+
+Absolute positioning allows you to precisely position an element relative to its nearest positioned ancestor or the document's initial containing block.
+The element is taken out of the normal document flow, meaning other elements will not be affected by its position.
+The position of the element is defined using the top, right, bottom, and left properties.
+
+Here's an example:
+html
+
+<div style="position: relative;">
+  <div style="position: absolute; top: 20px; left: 20px;">Absolute Positioning</div>
+</div>
+In this example, the inner <div> is positioned 20 pixels from the top and left edges of its nearest positioned ancestor (the outer <div> with position: relative).
+
+2.Relative Positioning:
+
+Relative positioning allows you to adjust an element's position relative to its normal position within the document flow.
+The element still occupies space in the normal document flow, and other elements will respect its original position.
+The position of the element is defined using the top, right, bottom, and left properties, similar to absolute positioning.
+Here's an example:
+html
+
+<div style="position: relative;">
+  <div style="position: relative; top: 20px; left: 20px;">Relative Positioning</div>
+</div>
+In this example, the inner <div> is positioned 20 pixels from its original position, while still occupying space within its containing <div>.
+
+3.Sticky Positioning:
+
+Sticky positioning is a hybrid of relative and fixed positioning.
+It behaves as relative positioning until the element reaches a specific scroll threshold, after which it becomes fixed and remains in its fixed position as long as the user scrolls within its containing element.
+Sticky positioning is defined using the position: sticky; property.
+Here's an example:
+html
+
+<div style="height: 500px; overflow: auto;">
+  <div style="position: sticky; top: 20px;">Sticky Positioning</div>
+  <!-- Content -->
+</div>
+In this example, the inner <div> behaves as relative positioning until the user scrolls, at which point it becomes fixed 20 pixels from the top of its containing element (<div> with a fixed height and scrollable content).
+
+4.Fixed Positioning:
+
+Fixed positioning positions an element relative to the viewport, regardless of scrolling.
+The element is removed from the document flow and remains fixed at its specified position even when the user scrolls the page.
+The position of the element is defined using the top, right, bottom, and left properties.
+Here's an example:
+html
+
+<div style="position: fixed; top: 20px; left: 20px;">Fixed Positioning</div>
+In this example, the <div> is fixed 20 pixels from the top and left edges of the viewport and does not move when the user scrolls.
+Understanding the differences between these positioning methods is crucial for controlling the layout and behavior of elements within a webpage. Each position type serves different purposes and has distinct effects on the document flow and scrolling behavior.

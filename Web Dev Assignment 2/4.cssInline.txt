@@ -1,0 +1,27 @@
+/*
+4 Whats difference between Inline, Inline Block and block ?
+*/
+Ans:-
+Inline, inline-block, and block are three display properties in CSS that define how elements are rendered and behave in relation to other elements. Here are the differences between them:
+
+1.Inline:-
+
+Inline elements do not start on a new line. They flow along with the text and other inline elements.
+Examples of inline elements are <span>, <a>, <strong>, <em>.
+Inline elements ignore properties related to width and height, such as width, height, margin-top, margin-bottom, padding-top, padding-bottom.
+Inline elements can be affected by properties like margin-left, margin-right, padding-left, padding-right.
+
+2.Inline-block:
+
+Inline-block elements are similar to inline elements in that they do not start on a new line.
+However, inline-block elements can have a width and height specified and can have vertical margins and padding.
+Examples of inline-block elements are <img>, <input>, <button>.
+Inline-block elements flow along with the text but can have block-level properties applied to them.
+
+3.Block:
+
+Block elements start on a new line and occupy the full available width.
+Examples of block elements are <div>, <p>, <h1>-<h6>.
+Block elements can have width, height, margins, and padding properties applied to them.
+By default, block elements take up the full width of their parent container, unless a specific width is set.
+In summary, inline elements flow with the text and do not have a specified width or height, inline-block elements behave similarly to inline elements but can have block-level properties, and block elements start on a new line and have a specified width and height. Choosing the appropriate display property depends on the desired layout and behavior you want to achieve for your elements.

@@ -1,0 +1,32 @@
+/*
+6 What’s z-index and How does it Function ?
+*/
+Ans:-
+In CSS, the z-index property determines the stacking order of positioned elements along the z-axis (the depth axis). It specifies how elements are layered and displayed on top of or behind other elements on the webpage. The z-index value can be either positive, negative, or zero.
+
+Here's how the z-index property functions:
+
+1.Stacking Context:
+
+Each positioned element with a z-index value other than auto creates a new stacking context.
+Stacking contexts establish a local coordinate system for z-index values within that element and its descendants.
+Elements within a stacking context are stacked relative to each other, and the stacking order does not affect elements outside the stacking context.
+
+2.Stacking Order:
+
+Elements with a higher z-index value are stacked above elements with a lower z-index value.
+If elements have the same z-index, their stacking order is determined by their position in the HTML markup, with the last element appearing on top.
+By default, elements have a z-index of auto, which means their stacking order depends on their position in the HTML markup and the stacking order of their parent elements.
+
+3.Parent-Child Relationship:
+
+The z-index property creates a stacking context for each positioned element, affecting its children as well.
+A child element with a higher z-index than its parent can be stacked above other children of the parent but remains below other elements outside the parent's stacking context.
+
+4.Negative and Positive Values:
+
+Negative z-index values place an element behind elements with a z-index of 0 or greater. The lower the negative value, the further back it is placed.
+Positive z-index values place an element above elements with a z-index of 0 or lower. The higher the positive value, the further forward it is placed.
+Note that z-index values are relative to the stacking context they are within. A higher z-index value within a child stacking context does not necessarily mean it is above an element with a lower z-index in a parent stacking context.
+
+The z-index property is commonly used to control the layering and stacking order of elements, especially when working with overlapping or nested elements. It allows you to position elements on top of or below others, creating visual hierarchy and controlling the display order. However, it's important to use z-index judiciously to avoid creating complex and hard-to-manage stacking contexts.

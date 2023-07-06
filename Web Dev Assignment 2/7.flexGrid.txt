@@ -1,0 +1,29 @@
+/*
+7 What’s Grid & Flex and difference between them?
+*/
+Ans:-
+Grid and Flex are both CSS layout systems that provide powerful tools for creating responsive and flexible designs. While they have similarities, they also have distinct differences in terms of their approach and functionality:
+
+1.Grid:
+
+CSS Grid Layout, or simply Grid, is a two-dimensional layout system that allows you to create complex grid-based layouts.
+It enables you to define rows and columns and place elements within specific cells or spans of the grid.
+Grid provides precise control over the placement, alignment, and sizing of both rows and columns.
+It allows you to create grid tracks, set their sizes (fixed or flexible), and create responsive layouts that adapt to different screen sizes.
+Grid is well-suited for creating overall page layouts, organizing content into grid structures, and aligning elements both vertically and horizontally.
+Grid supports both explicit grid (where you define the grid structure) and implicit grid (where the grid is created automatically based on the content).
+
+2.Flexbox:
+
+CSS Flexible Box Layout, or Flexbox, is a one-dimensional layout system that focuses on arranging elements in a single row or column.
+It allows you to distribute space and align items within a container along the main axis (horizontal or vertical).
+Flexbox provides flexibility in controlling the size and order of elements within a flexible container.
+It allows you to easily create responsive layouts and handle dynamic content resizing.
+Flexbox is particularly useful for creating components, such as navigation menus, card layouts, and flexible content containers.
+It provides powerful alignment and distribution capabilities, including options for centering, justifying, and spacing elements.
+Differences:
+
+Dimensionality: Grid is a two-dimensional layout system that provides control over rows and columns, while Flexbox is a one-dimensional layout system that focuses on arranging elements in a single direction.
+Layout Control: Grid offers more control over both rows and columns, allowing precise placement and sizing. Flexbox focuses on flexible container layouts and provides control over item alignment and distribution within the container.
+Use Cases: Grid is often used for creating overall page layouts, complex grid structures, and aligning elements in multiple directions. Flexbox is commonly used for arranging components, responsive item positioning, and handling content resizing within a container.
+In practice, Grid and Flexbox are often used together to achieve complex and flexible layouts. By leveraging the strengths of each system, developers can create sophisticated and responsive designs that adapt to various screen sizes and content arrangements.

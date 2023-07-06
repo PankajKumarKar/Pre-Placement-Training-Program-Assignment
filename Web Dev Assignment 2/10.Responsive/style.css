@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 1.6rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav .box1 {
+  height: 10vh;
+  width: 30%;
+  background-color: aqua;
+}
+
+nav .box2 {
+  height: 10vh;
+  width: 70%;
+  background-color: blue;
+}
+section {
+  margin: 20px 0;
+  height: 40vh;
+  width: 100%;
+  background-color: yellow;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.cards .card {
+  height: 30vh;
+  width: 35vw;
+  background-color: chartreuse;
+}
+
+footer {
+  height: 30vh;
+  width: 100%;
+  background-color: brown;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .cards {
+    flex-direction: column;
+  }
+  .cards .card {
+    height: 20vh;
+    width: 100%;
+  }
+}
