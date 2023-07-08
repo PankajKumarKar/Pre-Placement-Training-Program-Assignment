@@ -1,0 +1,33 @@
+/*
+7 What’s difference between map & forEach?
+*/
+Ans:-
+The map() and forEach() methods are both used to iterate over arrays in JavaScript, but they differ in their purpose and return values.
+
+Purpose:
+
+map(): The map() method creates a new array by applying a provided function to each element of the calling array. It returns a new array containing the results of the function applied to each element in the original array. The original array remains unchanged.
+forEach(): The forEach() method executes a provided function once for each element in the array. It does not create a new array and does not modify the original array. Its primary purpose is to perform an action or side effect on each element of the array.
+Return Value:
+map(): The map() method returns a new array that is the result of applying the provided function to each element of the original array.
+forEach(): The forEach() method does not return anything. It simply iterates over the array and performs an action for each element.
+Here's an example to illustrate the difference:
+
+javascript
+
+const numbers = [1, 2, 3, 4, 5];
+
+const doubledMap = numbers.map(num => num * 2);
+console.log(doubledMap); // Output: [2, 4, 6, 8, 10]
+
+const doubledForEach = [];
+numbers.forEach(num => doubledForEach.push(num * 2));
+console.log(doubledForEach); // Output: [2, 4, 6, 8, 10]
+
+In this example, both map() and forEach() are used to double each number in the numbers array. The map() method creates a new array doubledMap containing the doubled values, while the forEach() method pushes the doubled values into the doubledForEach array.
+
+In summary, the key differences between map() and forEach() are:
+
+1.map() creates a new array with the results of applying a provided function to each element, while forEach() does not create a new array.
+2.map() returns the new array, while forEach() does not return anything.
+3.map() is useful when you want to transform each element of an array and collect the results, while forEach() is used when you want to perform an action for each element without modifying the array or collecting the results.

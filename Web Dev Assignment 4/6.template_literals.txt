@@ -1,0 +1,56 @@
+/*
+6  What is template literals in ES6 and how do you use them?
+*/
+Ans:-
+Template literals, introduced in ECMAScript 6 (ES6), are an enhanced way to work with strings in JavaScript. They provide a more convenient syntax for string interpolation, multiline strings, and expression embedding.
+
+To use template literals in JavaScript, you wrap your string with backticks (`) instead of single or double quotes. Within the template literal, you can include placeholders using ${expression}. The expression inside the placeholder can be a variable, function call, or any valid JavaScript expression.
+
+Here's an example that demonstrates the usage of template literals:
+
+javascript
+
+const name = 'Alice';
+const age = 25;
+
+const greeting = `Hello, my name is ${name} and I am ${age} years old.`;
+
+console.log(greeting);
+In this example, we create a template literal by enclosing the string with backticks. Inside the template literal, we use ${} to interpolate variables name and age into the resulting string. The output of the console.log statement will be:
+
+
+Hello, my name is Alice and I am 25 years old.
+
+Template literals also support multiline strings without the need for escape characters. You can simply add line breaks within the template literal:
+
+javascript
+
+const message = `
+This is a
+multiline
+string.
+`;
+
+console.log(message);
+In this case, the output will preserve the line breaks, resulting in:
+
+
+This is a
+multiline
+string.
+
+Template literals allow you to embed expressions directly within the string using ${}. This allows for dynamic values and calculations:
+
+javascript
+
+const a = 5;
+const b = 7;
+
+const result = `The sum of ${a} and ${b} is ${a + b}.`;
+
+console.log(result);
+The output will be:
+
+The sum of 5 and 7 is 12.
+
+Template literals provide a more expressive and flexible way to work with strings in JavaScript, making it easier to incorporate variables and expressions within the text. They improve code readability and simplify string manipulation.

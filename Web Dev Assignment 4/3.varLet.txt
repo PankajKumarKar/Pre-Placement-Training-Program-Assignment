@@ -1,0 +1,47 @@
+/*
+3 Difference between var & let?
+*/
+Ans:-
+The main difference between var and let in JavaScript lies in their scoping behavior and how they are affected by hoisting. Here are the key differences:
+
+1.Scope: Variables declared with var are function-scoped, meaning they are accessible throughout the entire function in which they are declared, regardless of block boundaries. On the other hand, variables declared with let are block-scoped, meaning they are only accessible within the block in which they are declared.
+
+javascript
+
+function example() {
+  if (true) {
+    var x = 10;
+    let y = 20;
+  }
+
+  console.log(x); // Output: 10
+  console.log(y); // Output: ReferenceError: y is not defined
+}
+
+example();
+In this example, x is accessible outside the if block due to var being function-scoped. However, y is only accessible within the if block since it is block-scoped using let.
+
+2.Hoisting: Variables declared with var are hoisted to the top of their containing function or global scope. This means you can access and use var variables before their actual declaration in the code. On the other hand, variables declared with let are also hoisted but remain in the "Temporal Dead Zone" until their declaration statement is encountered during runtime. Attempting to access a let variable before its declaration results in a ReferenceError.
+
+javascript
+
+console.log(x); // Output: undefined
+var x = 10;
+
+console.log(y); // Output: ReferenceError: y is not defined
+let y = 20;
+In this example, the var variable x is hoisted, resulting in undefined when accessed before its declaration. The let variable y, however, is also hoisted but cannot be accessed until after its declaration, as it is within the Temporal Dead Zone.
+
+3.Re-declaration: Variables declared with var can be re-declared multiple times within the same scope without any issues. On the other hand, re-declaring a variable with the same name using let within the same scope results in a SyntaxError.
+
+javascript
+
+var x = 10;
+var x = 20;
+console.log(x); // Output: 20
+
+let y = 10;
+let y = 20; // SyntaxError: Identifier 'y' has already been declared
+In this example, re-declaring x with var is allowed and the variable takes on the value of the most recent declaration. However, re-declaring y with let results in a SyntaxError since variables declared with let cannot be re-declared within the same scope.
+
+In general, it is recommended to use let (or const) instead of var as it provides better scoping behavior, helps avoid hoisting-related issues, and promotes cleaner and more predictable code.

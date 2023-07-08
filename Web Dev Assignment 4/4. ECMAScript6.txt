@@ -1,0 +1,27 @@
+/*
+4 What are the major features introduced in ECMAScript 6?
+*/
+Ans:-
+ECMAScript 6 (ES6), also known as ECMAScript 2015, brought significant enhancements and new features to the JavaScript language. Some of the major features introduced in ES6 include:
+
+1.let and const Declarations: The let and const keywords were introduced for block-scoped variable declarations. They offer better scoping behavior compared to var and help in avoiding certain pitfalls related to variable hoisting.
+
+2.Arrow Functions: Arrow functions provide a concise syntax for writing function expressions. They have a shorter syntax and lexically bind the this value, making them useful for callback functions and avoiding the need for bind() or self = this workarounds.
+
+3.Classes: ES6 introduced class syntax for defining JavaScript classes. The class syntax provides a more familiar and intuitive way to work with object-oriented programming concepts in JavaScript.
+
+4.Modules: The import and export keywords allow modularizing JavaScript code by creating separate modules. Modules provide better organization, encapsulation, and reusability of code.
+
+5.Template Literals: Template literals allow for easier string interpolation and multiline string formatting. They provide a convenient syntax for embedding expressions within strings using backticks (`).
+
+6.Destructuring Assignment: Destructuring assignment provides a concise way to extract values from arrays or objects into individual variables. It simplifies code and allows for more readable and compact assignments.
+
+7.Default Parameters: Default parameter values can be assigned to function parameters, allowing functions to be called with fewer arguments. If an argument is not provided, the default value is used.
+
+8.Rest and Spread Operators: The rest (...) operator allows capturing multiple function arguments into an array, while the spread operator enables the expansion of an array or an iterable object into individual elements.
+
+9.Promises: Promises provide a cleaner and more structured way to work with asynchronous operations. They offer a mechanism for handling the result or error of an asynchronous operation, avoiding the "callback hell" and making code more readable and maintainable.
+
+10.Enhanced Object Literals: Object literals gained additional capabilities, including shorthand property and method syntax, computed property names, and the ability to define methods within object literals.
+
+These are just a few of the notable features introduced in ECMAScript 6. ES6 brought many other enhancements, such as new array methods, iterators, generators, and more, significantly improving JavaScript's capabilities and making the language more expressive and powerful.

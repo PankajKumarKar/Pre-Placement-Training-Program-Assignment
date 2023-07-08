@@ -1,0 +1,83 @@
+/*
+8 How can you destructure objects and arrays in ES6?
+*/
+Ans:-
+Destructuring is a feature introduced in ECMAScript 6 (ES6) that allows you to extract values from objects and arrays into individual variables. It provides a concise and convenient way to assign values from complex data structures.
+
+1.Destructuring Objects:
+To destructure an object, you use the curly braces {} and provide the variable names corresponding to the object's properties. Here's an example:
+
+javascript
+
+const person = {
+  name: 'John',
+  age: 30,
+  city: 'New York'
+};
+
+const { name, age, city } = person;
+
+console.log(name); // Output: 'John'
+console.log(age); // Output: 30
+console.log(city); // Output: 'New York'
+
+In this example, we have an object person with properties name, age, and city. We use destructuring to extract those properties into separate variables. The variables name, age, and city hold the corresponding values from the object.
+
+You can also assign default values during destructuring:
+
+javascript
+
+const person = {
+  name: 'John',
+  age: 30
+};
+
+const { name, age, city = 'Unknown' } = person;
+
+console.log(name); // Output: 'John'
+console.log(age); // Output: 30
+console.log(city); // Output: 'Unknown'
+
+In this case, the city property is not present in the person object, so the default value 'Unknown' is assigned to the city variable during destructuring.
+
+2.Destructuring Arrays:
+To destructure an array, you use square brackets []. The values are assigned to variables based on their positions in the array. Here's an example:
+
+javascript
+
+const numbers = [1, 2, 3];
+
+const [a, b, c] = numbers;
+
+console.log(a); // Output: 1
+console.log(b); // Output: 2
+console.log(c); // Output: 3
+In this example, the array numbers is destructured, and the values are assigned to variables a, b, and c respectively.
+
+You can also ignore certain elements by leaving empty slots:
+
+javascript
+
+const numbers = [1, 2, 3];
+
+const [a, , c] = numbers;
+
+console.log(a); // Output: 1
+console.log(c); // Output: 3
+In this case, the second element of the array is ignored during destructuring.
+
+Destructuring can also be combined with rest syntax (...) to capture remaining elements into a new array:
+
+javascript
+
+const numbers = [1, 2, 3, 4, 5];
+
+const [a, b, ...rest] = numbers;
+
+console.log(a); // Output: 1
+console.log(b); // Output: 2
+console.log(rest); // Output: [3, 4, 5]
+
+In this example, a and b capture the first two elements, while rest captures the remaining elements as an array.
+
+Destructuring is a powerful feature in ES6 that simplifies working with objects and arrays by extracting values into individual variables. It reduces code repetition and enhances readability.

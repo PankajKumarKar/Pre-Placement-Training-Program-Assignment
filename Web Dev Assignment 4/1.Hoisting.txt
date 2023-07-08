@@ -1,0 +1,50 @@
+/*
+1 Explain Hoisting in JavaScript.
+*/
+
+Ans:-
+Hoisting is a concept in JavaScript where variable and function declarations are moved to the top of their containing scope during the compilation phase, before the code is actually executed. This behavior allows you to use variables and functions before they are declared in your code.
+
+In JavaScript, when the code is executed, it goes through two phases: compilation and execution. During the compilation phase, the JavaScript engine scans the code and identifies variable and function declarations. It sets aside memory space for these declarations, regardless of where they are physically located in the code. This is what is known as hoisting.
+
+Let's take a look at an example to illustrate how hoisting works:
+
+javascript
+
+console.log(x); // Output: undefined
+var x = 10;
+console.log(x); // Output: 10
+
+In this example, the variable x is declared and assigned a value of 10. However, before the declaration, we are trying to log the value of x to the console. Despite the fact that the console.log(x) statement appears before the declaration, it doesn't result in an error. Instead, the variable x is hoisted to the top of its scope, and during execution, its initial value is undefined.
+
+Essentially, the code above is implicitly interpreted as:
+
+javascript
+
+var x;
+console.log(x); // Output: undefined
+x = 10;
+console.log(x); // Output: 10
+Function declarations are also hoisted in a similar way. Let's consider another example:
+
+javascript
+
+foo(); // Output: "Hello, world!"
+
+function foo() {
+  console.log("Hello, world!");
+}
+
+In this case, the foo() function is called before its actual declaration. However, due to hoisting, the function declaration is moved to the top of its scope, and the code is effectively interpreted like this:
+
+javascript
+
+function foo() {
+  console.log("Hello, world!");
+}
+
+foo(); // Output: "Hello, world!"
+
+It's important to note that only the declarations are hoisted, not the initializations or assignments. So, if you try to access a variable before it's declared and assigned a value, you will still get an error. Only the declaration itself is hoisted to the top of the scope.
+
+To avoid confusion and potential issues, it's considered good practice to always declare variables at the beginning of their scope, rather than relying on hoisting. Additionally, using let and const declarations instead of var can provide more predictable scoping behavior and help catch errors at compile time rather than relying on hoisting.

@@ -1,0 +1,73 @@
+/*
+5 What is the difference between let and const ?
+*/
+Ans:-
+The main difference between let and const in JavaScript is how they handle variable assignment and reassignment.
+
+1.Variable Assignment:
+let: Variables declared with let can be assigned a value and reassigned to a new value later. They are mutable.
+const: Variables declared with const must be assigned a value when declared, and that value cannot be changed or reassigned afterwards. They are immutable.
+
+javascript
+
+let x = 10;
+x = 20; // Valid
+
+const y = 10;
+y = 20; // Invalid - Assignment to a constant variable
+
+2.Scope:
+Both let and const are block-scoped, meaning they are accessible only within the block in which they are defined.
+javascript
+
+{
+  let x = 10;
+  const y = 20;
+}
+
+console.log(x); // ReferenceError: x is not defined
+console.log(y); // ReferenceError: y is not defined
+
+3.Hoisting:
+Variables declared with let and const are hoisted to the top of their block scope, but unlike var, they are not initialized. They remain in the Temporal Dead Zone until the actual declaration is encountered in the code.
+
+javascript
+
+console.log(x); // ReferenceError: Cannot access 'x' before initialization
+let x = 10;
+
+console.log(y); // ReferenceError: Cannot access 'y' before initialization
+const y = 20;
+
+4.Reassignment:
+let variables can be reassigned to a new value.
+const variables cannot be reassigned. However, for objects and arrays declared with const, their internal properties or elements can still be modified.
+
+javascript
+
+let x = 10;
+x = 20; // Valid
+
+const y = 10;
+y = 20; // Invalid - Assignment to a constant variable
+
+const obj = { value: 10 };
+obj.value = 20; // Valid - Modifying object property
+
+const arr = [1, 2, 3];
+arr.push(4); // Valid - Modifying array
+
+5.Block Scoping:
+Both let and const are block-scoped, which means they are only accessible within the block in which they are defined.
+
+javascript
+
+{
+  let x = 10;
+  const y = 20;
+  console.log(x, y); // Output: 10 20
+}
+
+console.log(x); // ReferenceError: x is not defined
+console.log(y); // ReferenceError: y is not defined
+In general, it is recommended to use let when you need to reassign the variable's value, and use const when the variable should not be reassigned and you want to ensure its immutability. It helps prevent accidental reassignments and provides more readable and maintainable code.

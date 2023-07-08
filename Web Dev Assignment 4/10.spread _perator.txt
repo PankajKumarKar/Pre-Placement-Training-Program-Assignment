@@ -1,0 +1,62 @@
+/*
+10 What is the purpose of the spread operator (...) in ES6?
+*/
+Ans:-
+The spread operator (...) is a powerful feature introduced in ECMAScript 6 (ES6) that allows you to expand or spread iterable objects, such as arrays or strings, into individual elements. It has multiple purposes and can be used in different contexts.
+
+Array Manipulation and Concatenation:
+The spread operator can be used to create new arrays by combining or manipulating existing arrays. It allows you to easily concatenate arrays or create shallow copies. Here are a few examples:
+
+javascript
+
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+
+const combinedArray = [...arr1, ...arr2];
+console.log(combinedArray); // Output: [1, 2, 3, 4, 5, 6]
+
+const shallowCopy = [...arr1];
+console.log(shallowCopy); // Output: [1, 2, 3]
+
+In this example, the spread operator is used to concatenate arr1 and arr2 into combinedArray. It is also used to create a shallow copy of arr1 in shallowCopy.
+
+Function Arguments:
+The spread operator can be used to pass multiple arguments to a function, even when the arguments are contained in an array. It expands the elements of the array into individual arguments. Here's an example:
+
+javascript
+
+function sum(a, b, c) {
+  return a + b + c;
+}
+
+const numbers = [1, 2, 3];
+const result = sum(...numbers);
+console.log(result); // Output: 6
+
+In this example, the spread operator is used to pass the elements of the numbers array as individual arguments to the sum() function.
+
+Object Manipulation (ES9 and later):
+Starting from ECMAScript 2018 (ES9), the spread operator can also be used to copy or merge objects. It creates a new object by spreading the properties of an existing object. Here's an example:
+
+javascript
+
+const obj1 = { x: 1, y: 2 };
+const obj2 = { z: 3 };
+
+const mergedObject = { ...obj1, ...obj2 };
+console.log(mergedObject); // Output: { x: 1, y: 2, z: 3 }
+
+In this example, the spread operator is used to create mergedObject by spreading the properties of obj1 and obj2 into a new object.
+
+String to Array Conversion:
+The spread operator can be used to convert a string into an array of characters. Each character becomes an individual element in the resulting array. Here's an example:
+
+javascript
+
+const str = 'Hello';
+const chars = [...str];
+console.log(chars); // Output: ['H', 'e', 'l', 'l', 'o']
+
+In this example, the spread operator is used to convert the string str into an array of characters.
+
+These are just a few use cases of the spread operator. It provides a concise and convenient way to work with iterable objects and enables efficient array manipulation, function invocation, object merging, and string manipulation in JavaScript.
