@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Link CSS-->
+    <link rel="stylesheet" href="./style.css">
+    <title>Form Validation</title>
+</head>
+<body>
+
+    <!--Form-->
+
+    <form id="myForm" onsubmit="validateForm(event)">
+
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div>
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <div>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+
+        <div>
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" required>
+        </div>
+
+        <div>
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender" required>
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+
+        <div>
+          <label for="color">Color:</label>
+          <input type="color" id="color" name="color" required>
+        </div>
+        
+        <button type="submit">Submit</button>
+      </form>
+    
+    <!--Link javaScript-->
+    <script src="./form_validation.js"></script>
+</body>
+</html>

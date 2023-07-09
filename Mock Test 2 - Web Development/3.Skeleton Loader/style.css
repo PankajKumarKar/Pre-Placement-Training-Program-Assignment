@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.skeletonLodder div {
+  width: 100%;
+  height: 25px;
+  background-color: aliceblue;
+  margin-top: 1rem;
+}
+
+.data {
+  font-size: 1.6rem;
+  color: #a52a2a;
+  border: 2px solid grey;
+  padding: 1rem;
+}

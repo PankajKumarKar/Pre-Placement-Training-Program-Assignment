@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  background-color: red;
+  height: 300px;
+  width: 300px;
+  border: 1px solid black;
+  transition: background-color 0.8s, width 0.8s, height 0.8s;
+  cursor: pointer;
+}
