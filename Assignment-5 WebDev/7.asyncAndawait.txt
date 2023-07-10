@@ -1,0 +1,43 @@
+/*
+7 What’s async & await Keyword in JavaScript?
+*/
+Ans:-
+The async and await keywords are part of the asynchronous programming model introduced in ES2017 (ES8) in JavaScript. They provide a more synchronous-like syntax for writing and handling asynchronous code, making it easier to read, write, and reason about asynchronous operations.
+
+Here's an explanation of async and await:
+
+1.async:
+
+The async keyword is used to define an asynchronous function. An asynchronous function always returns a Promise.
+Within an asynchronous function, you can use the await keyword to pause the execution of the function until a Promise is resolved or rejected. The await keyword can only be used inside an async function.
+Example:
+
+javascript
+
+async function fetchData() {
+  // Asynchronous operation
+  const response = await fetch('https://api.example.com/data');
+  const data = await response.json();
+  return data;
+}
+In the example above, the fetchData function is defined as an async function. Within the function, the await keyword is used to pause the execution until the promise returned by fetch() resolves. This allows you to write asynchronous code in a more sequential and readable manner.
+
+2.await:
+
+The await keyword is used to wait for a Promise to resolve or reject inside an async function. It can only be used within an async function.
+When encountering the await keyword, the JavaScript engine suspends the execution of the async function until the awaited Promise settles (resolves or rejects). It then resumes the function execution with the resolved value or throws an error if the Promise is rejected.
+Example:
+
+javascript
+
+async function fetchData() {
+  // Asynchronous operation
+  const response = await fetch('https://api.example.com/data');
+  const data = await response.json();
+  return data;
+}
+
+In the example above, await is used to wait for the fetch() promise to resolve and then assign the resolved response to the response variable. The subsequent await is used to wait for the response.json() promise to resolve and assign the parsed JSON data to the data variable.
+The combination of async and await simplifies the handling of Promises and makes asynchronous code appear more like synchronous code, without blocking the execution of the JavaScript event loop. This allows for clearer and more readable code, as the flow of control is easier to understand and handle errors in a more structured way.
+
+It's important to note that using await only within an async function is necessary, as it is a syntax feature designed specifically for working with Promises and asynchronous operations.

@@ -1,0 +1,38 @@
+/*
+10 How do you define an asynchronous function in JavaScript using async/await?
+*/
+Ans:-
+To define an asynchronous function in JavaScript using async/await, you simply prefix the function declaration with the async keyword. This signals that the function will contain asynchronous code and will return a Promise.
+
+Here's the syntax for defining an asynchronous function using async/await:
+
+javascript
+
+async function functionName() {
+  // Asynchronous code here
+  // Can use await to pause execution and wait for Promises to resolve
+  // Can throw exceptions using throw
+  // Returns a Promise that will be fulfilled with the return value or rejected with thrown error
+}
+Here's an example of an asynchronous function that uses async/await:
+
+javascript
+
+async function fetchData() {
+  try {
+    const response = await fetch('https://api.example.com/data');
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.log('Error:', error);
+    throw error;
+  }
+}
+In the example above:
+
+The fetchData function is defined with the async keyword, indicating that it is an asynchronous function.
+Inside the function, the await keyword is used to pause the execution at the points where asynchronous operations occur. This allows the code to wait for Promises to resolve before proceeding.
+The await keyword is used with the fetch function to make an asynchronous HTTP request, and later with the response.json() method to parse the response body as JSON.
+
+The function can use a try/catch block to handle errors that may occur during the asynchronous operations. The catch block logs the error and rethrows it to propagate the error to the caller.
+The async/await syntax simplifies the handling of Promises and asynchronous code, making it resemble synchronous code. It allows you to write asynchronous code in a more sequential and readable manner, with error handling that resembles traditional try/catch blocks.

@@ -1,0 +1,28 @@
+/*
+1 What’s difference between Synchronous and Asynchronous?
+*/
+
+Ans:-
+Synchronous and asynchronous are terms used to describe different modes of communication and interaction between processes or systems. The key difference lies in how the timing and coordination of actions are handled.
+
+1.Synchronous: In synchronous communication or operation, tasks or processes occur in a predetermined, coordinated manner. The sender and receiver are both actively involved in the communication, and they must be in sync for the interaction to proceed. Here are some characteristics of synchronous communication:
+
+Blocking: In synchronous operations, the sender waits for a response from the receiver before proceeding. The sender's execution is blocked until it receives a reply or completion signal.
+
+Timing-dependent: Synchronous communication relies on precise timing and coordination. The sender and receiver must be available and ready to participate in the interaction at the same time.
+
+Real-time: Synchronous operations often happen in real-time or near real-time, allowing for immediate feedback and response.
+
+Examples: Phone calls, face-to-face conversations, traditional client-server interactions where the client waits for a response from the server before continuing.
+
+2.Asynchronous: In asynchronous communication or operation, tasks or processes can occur independently of each other without the need for immediate coordination. Each task or process operates separately, and the completion of one does not depend on the others. Here are some characteristics of asynchronous communication:
+
+Non-blocking: In asynchronous operations, the sender initiates a task or request and continues with its own execution without waiting for an immediate response. The sender doesn't block and can proceed with other tasks.
+
+Timing-independent: Asynchronous communication does not rely on precise timing or immediate coordination. The sender and receiver do not have to be available simultaneously.
+
+Deferred response: In asynchronous communication, the receiver processes the request at its own pace and provides a response or completion signal when ready.
+
+Examples: Email communication, asynchronous messaging systems (e.g., chat applications where participants can send messages independently), asynchronous JavaScript requests (AJAX) in web development.
+
+In summary, synchronous communication involves coordinated, blocking interactions that depend on precise timing, while asynchronous communication allows for non-blocking, independent operations that do not rely on immediate coordination or timing. The choice between synchronous and asynchronous approaches depends on the specific requirements and constraints of the system or task at hand.

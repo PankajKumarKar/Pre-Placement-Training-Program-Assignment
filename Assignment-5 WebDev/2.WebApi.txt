@@ -1,0 +1,25 @@
+/*
+2 What are Web Apis ?
+*/
+Ans:-
+Web APIs (Application Programming Interfaces) are sets of rules and protocols that enable different software applications to communicate and interact with each other over the internet. They provide a standardized way for applications to access and exchange data and functionality.
+
+Web APIs are primarily used for web development, allowing developers to build applications that can interact with external services, retrieve data, and perform various operations. These APIs are typically exposed by web servers or web-based services, allowing developers to access their functionality and data through well-defined endpoints.
+
+Here are some key points about web APIs:
+
+1.Data exchange: Web APIs facilitate the exchange of data between different software systems. They define the structure and format of data that can be sent and received, typically using widely adopted formats such as JSON (JavaScript Object Notation) or XML (eXtensible Markup Language).
+
+2.Remote access: Web APIs enable remote access to the functionality and resources of a web service. This means that developers can make requests to the API endpoints over the internet, without needing to understand the internal implementation details of the service.
+
+3.Request-response model: Web APIs follow a request-response model, where the client (requesting application) sends a request to the server (API provider), and the server processes the request and returns a response. The response can contain the requested data or indicate the status of the operation.
+
+4.RESTful APIs: Representational State Transfer (REST) is a widely used architectural style for designing web APIs. RESTful APIs use standard HTTP methods (e.g., GET, POST, PUT, DELETE) to perform operations on resources. They leverage the stateless nature of HTTP and typically use URLs (Uniform Resource Locators) to identify and access resources.
+
+5.Functionality and services: Web APIs can provide various types of functionality and services, such as data retrieval from databases, integration with third-party services (e.g., social media platforms, payment gateways), real-time communication (e.g., WebSocket APIs), and more.
+
+6.Authentication and authorization: Web APIs often require authentication and authorization to ensure that only authorized clients can access certain resources or perform specific operations. Common authentication mechanisms include API keys, tokens, and OAuth.
+
+Popular examples of web APIs include the Google Maps API, Twitter API, and GitHub API, among many others. These APIs allow developers to integrate the respective services into their applications and leverage their features and data.
+
+Overall, web APIs play a crucial role in enabling interoperability, integration, and the development of rich and connected web applications by providing a standardized way for applications to communicate and access remote resources.

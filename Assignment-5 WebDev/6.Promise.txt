@@ -1,0 +1,67 @@
+/*
+6 What are Promises & Explain Some Three Methods of Promise.
+*/
+Ans:-
+Promises are objects in JavaScript that represent the eventual completion (or failure) of an asynchronous operation. They provide a cleaner and more structured way to handle asynchronous code compared to traditional callback-based approaches. Promises help in handling the result of an asynchronous operation once it becomes available, allowing you to chain operations and handle errors effectively.
+
+A Promise can be in one of three states:
+
+1.Pending: The initial state when the Promise is created and the asynchronous operation is ongoing.
+Fulfilled: The state when the Promise successfully completes, and the result value is available.
+Rejected: The state when the Promise encounters an error or fails to fulfill its intended operation.
+Promises provide three main methods to interact with them and handle their outcomes:
+
+then(): This method is used to handle the fulfillment of a Promise. It takes two optional arguments: onFulfilled and onRejected callback functions. These callbacks are executed when the Promise is fulfilled or rejected, respectively.
+
+Example:
+javascript
+
+asyncFunction()
+  .then(function(result) {
+    // Handle the fulfilled result here
+  })
+  .catch(function(error) {
+    // Handle errors, if any
+  });
+
+catch(): This method is used to handle the rejection of a Promise. It registers a callback function that is executed when the Promise is rejected.
+
+Example:
+
+Copy code
+asyncFunction()
+  .then(function(result) {
+    // Handle the fulfilled result here
+  })
+  .catch(function(error) {
+    // Handle errors, if any
+  });
+
+finally(): This method is used to register a callback function that is executed when the Promise is either fulfilled or rejected, regardless of the outcome. It allows you to specify code that should be executed regardless of success or failure.
+
+Example:
+javascript
+
+asyncFunction()
+  .then(function(result) {
+    // Handle the fulfilled result here
+  })
+  .catch(function(error) {
+    // Handle errors, if any
+  })
+  .finally(function() {
+    // Cleanup or additional actions to be performed
+  });
+
+The then() method allows you to chain multiple Promises together by returning a new Promise or a value within the onFulfilled callback. This chaining enables a more sequential and readable style of handling asynchronous operations.
+
+Additionally, Promises also provide static methods that can be called directly on the Promise constructor:
+
+Promise.resolve(value): Creates a Promise that is already fulfilled with the specified value.
+Promise.reject(reason): Creates a Promise that is already rejected with the specified reason.
+Promise.all(iterable): Takes an iterable (e.g., an array) of Promises and returns a new Promise that fulfills when all Promises in the iterable fulfill, or rejects if any of the Promises reject.
+Promise.race(iterable): Takes an iterable of Promises and returns a new Promise that fulfills or rejects as soon as any of the Promises in the iterable fulfills or rejects.
+
+These methods provide additional utility for handling multiple Promises or converting non-Promises into Promises.
+
+Promises provide a more structured and manageable way to handle asynchronous code, enabling better error handling, sequential operations, and cleaner code organization.

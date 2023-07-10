@@ -1,0 +1,83 @@
+/*
+4 how can you handle Async code in JavaScript ?
+*/
+Ans:-
+Ans:-
+In JavaScript, handling asynchronous code is essential for dealing with tasks that take time to complete, such as making network requests, reading/writing files, or executing time-consuming operations. JavaScript provides several mechanisms to handle asynchronous code effectively. Here are a few commonly used techniques:
+
+1.Callbacks:
+
+Callbacks are functions passed as arguments to asynchronous functions. They are called once the asynchronous operation completes.
+Example:
+javascript
+
+function fetchData(callback) {
+  // Simulating an asynchronous operation
+  setTimeout(function() {
+    const data = 'Some data';
+    callback(data);
+  }, 2000);
+}
+
+fetchData(function(data) {
+  console.log(data); // Handle the fetched data here
+});
+
+Callbacks can lead to callback hell or the "pyramid of doom" when dealing with multiple asynchronous operations nested within each other. This can make code difficult to read and maintain.
+
+2.Promises:
+Promises provide a more structured and readable way to handle asynchronous code. A promise represents the eventual completion (or failure) of an asynchronous operation and allows you to chain operations.
+Example:
+
+javascript
+
+function fetchData() {
+  return new Promise(function(resolve, reject) {
+    // Simulating an asynchronous operation
+    setTimeout(function() {
+      const data = 'Some data';
+      resolve(data); // Resolve the promise with the fetched data
+    }, 2000);
+  });
+}
+
+fetchData()
+  .then(function(data) {
+    console.log(data); // Handle the fetched data here
+  })
+  .catch(function(error) {
+    console.log(error); // Handle errors, if any
+  });
+Promises offer more control over error handling using the catch method and enable chaining of multiple asynchronous operations using then.
+
+3.Async/await:
+
+Async/await is a syntax introduced in ES2017 (ES8) that allows writing asynchronous code in a more synchronous style. It is built on top of promises and provides a way to handle promises with a more sequential and readable approach.
+Example:
+
+javascript
+
+async function fetchData() {
+  return new Promise(function(resolve, reject) {
+    // Simulating an asynchronous operation
+    setTimeout(function() {
+      const data = 'Some data';
+      resolve(data); // Resolve the promise with the fetched data
+    }, 2000);
+  });
+}
+
+async function handleData() {
+  try {
+    const data = await fetchData(); // Wait for the promise to resolve
+    console.log(data); // Handle the fetched data here
+  } catch (error) {
+    console.log(error); // Handle errors, if any
+  }
+}
+
+handleData();
+
+
+The async keyword is used to define an asynchronous function, and the await keyword is used to pause the execution of the function until a promise is resolved.
+These are some of the primary ways to handle asynchronous code in JavaScript. Each technique has its advantages, and the choice depends on the specific requirements and the version of JavaScript you are using. Promises and async/await have become the more preferred approaches in modern JavaScript development due to their improved readability and error handling capabilities.

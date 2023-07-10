@@ -1,0 +1,69 @@
+/*
+5 What are Callbacks &  Callback Hell ?
+*/
+Ans:-
+Callbacks are functions passed as arguments to other functions in JavaScript. They are commonly used in asynchronous programming to handle the completion of an asynchronous operation. When the asynchronous operation is finished, the callback function is invoked, allowing you to perform further actions or process the result.
+
+Here's a simple example of using a callback:
+
+javascript
+
+function fetchData(callback) {
+  // Simulating an asynchronous operation
+  setTimeout(function() {
+    const data = 'Some data';
+    callback(data);
+  }, 2000);
+}
+
+function handleData(data) {
+  console.log(data); // Handle the fetched data here
+}
+
+fetchData(handleData);
+
+
+In the example above, the fetchData function takes a callback function as an argument. After a simulated delay of 2 seconds, it invokes the callback function with the fetched data. The handleData function is the callback function, and it receives the data and handles it.
+
+Callback Hell, also known as the Pyramid of Doom, is a situation that arises when dealing with multiple asynchronous operations in JavaScript, where callbacks are nested within each other. As the number of asynchronous operations grows, the code structure becomes deeply nested and can become difficult to read and maintain. This nesting can lead to code that looks like a pyramid, with multiple levels of indentation.
+
+Here's an example of callback hell:
+
+javascript
+
+asyncFunction1(function(result1) {
+  asyncFunction2(result1, function(result2) {
+    asyncFunction3(result2, function(result3) {
+      asyncFunction4(result3, function(result4) {
+        // More nested callbacks...
+      });
+    });
+  });
+});
+
+As you can see, as more asynchronous operations are introduced, the code becomes increasingly complex and harder to follow. This structure makes it difficult to understand the flow of the program, handle errors, or make changes to the code.
+
+Callback Hell can be mitigated by using alternative techniques like Promises or async/await, which provide a more structured and readable way to handle asynchronous code. Promises allow for chaining and error handling, while async/await provides a more synchronous-like syntax for writing asynchronous code. These techniques help avoid excessive nesting and make the code more manageable and maintainable.
+
+Here's an example of how the same code can be rewritten using Promises:
+
+javascript
+
+asyncFunction1()
+  .then(function(result1) {
+    return asyncFunction2(result1);
+  })
+  .then(function(result2) {
+    return asyncFunction3(result2);
+  })
+  .then(function(result3) {
+    return asyncFunction4(result3);
+  })
+  .then(function(result4) {
+    // Handle the final result
+  })
+  .catch(function(error) {
+    // Handle errors, if any
+  });
+
+With Promises, the code becomes more linear and easier to read, making it simpler to understand the sequence of asynchronous operations.
