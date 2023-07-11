@@ -1,0 +1,19 @@
+/*
+8 Whats Encapsulation and Purpose of it ?
+*/
+Ans:-
+Encapsulation is a fundamental concept in object-oriented programming (OOP) that combines data and related methods into a single unit called a class. It involves bundling data and behavior together, hiding the internal details of an object and providing a public interface for interacting with it. The purpose of encapsulation is to achieve data abstraction, promote code organization, and protect the integrity of the object.
+
+Here are the key aspects and purposes of encapsulation:
+
+1.Data Abstraction: Encapsulation allows for data abstraction, which means that the internal details of an object are hidden from the outside world. Only the essential properties and behaviors are exposed through a well-defined public interface. This abstraction simplifies the usage of the object and shields the complexity of the underlying implementation.
+
+2.Information Hiding: Encapsulation supports information hiding, also known as data hiding. It ensures that the internal state of an object is not directly accessible or modifiable from outside the object's methods. By encapsulating the data within the object and exposing controlled access through methods, encapsulation protects the integrity and consistency of the object's data.
+
+3.Code Organization and Modularity: Encapsulation promotes code organization and modularity by grouping related data and behavior into a single class. This improves code readability, maintainability, and reusability. With encapsulation, you can encapsulate the implementation details within the class, allowing other parts of the codebase to interact with the object through its public interface.
+
+4.Access Control: Encapsulation provides control over access to the internal state and behavior of an object. By defining proper access modifiers (e.g., public, private, protected) in the class, you can specify which members are accessible from outside the class. This enables you to enforce encapsulation and prevent unauthorized modification or access to the object's data.
+
+5.Code Flexibility and Evolution: Encapsulation enhances code flexibility and evolution by decoupling the object's interface from its implementation. The internal implementation details of an object can be changed without affecting the external code that relies on the object's public interface. This improves code maintainability and allows for easier updates, refactoring, and extension of the system.
+
+Encapsulation is a key principle of OOP that promotes the separation of concerns, information hiding, and code organization. It allows for data abstraction, protects the integrity of objects, and provides a well-defined public interface for interacting with the encapsulated data and behavior. By encapsulating data and methods together, encapsulation facilitates modular design, code reuse, and long-term maintainability of software systems.

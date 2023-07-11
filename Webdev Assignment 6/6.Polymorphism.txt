@@ -1,0 +1,19 @@
+/*
+6 Whats Polymorphism and Purpose of it?
+*/
+Ans:-
+Polymorphism is a concept in object-oriented programming that allows objects of different classes to be treated as objects of a common superclass. It refers to the ability of a single interface (method or property) to be implemented in multiple ways by different classes. The purpose of polymorphism is to provide flexibility, extensibility, and code reuse in software design.
+
+In JavaScript, polymorphism is achieved through dynamic typing and the ability to replace or override methods at runtime. Unlike statically typed languages, JavaScript does not enforce strict type checking, allowing objects to be flexible in their behavior and interaction.
+
+The key benefits and purposes of polymorphism in JavaScript are:
+
+1.Code Flexibility and Extensibility: Polymorphism allows you to define and implement methods in different ways in derived classes while maintaining a consistent interface. This means that objects of different classes can be used interchangeably, as long as they adhere to the same method signature. It promotes code flexibility and extensibility, enabling the addition of new classes and behaviors without modifying existing code.
+
+2.Code Reusability: Polymorphism facilitates code reuse by promoting the use of common interfaces and superclass types. By designing classes that adhere to a shared interface or inherit from a common superclass, you can write code that operates on the abstract type, allowing multiple concrete implementations to be used interchangeably. This reduces code duplication and promotes modular and reusable code.
+
+3.Simplified Interface: Polymorphism simplifies the interface for interacting with objects. Since objects of different classes can be treated uniformly, you can write code that works with abstract types rather than being concerned with the specific implementation details of individual objects. This abstraction helps manage complexity and promotes a clear separation between the interface and the implementation.
+
+4.Method Overriding: Polymorphism allows derived classes to override methods defined in their superclass, providing an opportunity to customize or extend the behavior of the inherited method. This enables specialization and customization of behavior for specific classes while still adhering to a shared interface.
+
+Polymorphism is a powerful and expressive feature of object-oriented programming. In JavaScript, it is often used in conjunction with inheritance to create flexible and modular code. By leveraging polymorphism, you can design systems that are adaptable to changing requirements, promote code reuse, and provide a consistent and simplified interface for interacting with objects.

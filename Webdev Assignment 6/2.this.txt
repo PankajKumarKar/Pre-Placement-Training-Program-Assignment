@@ -1,0 +1,33 @@
+/*
+2 Explain This Keyword and Its Purpose?
+*/
+Ans:-
+In JavaScript, the this keyword is a special identifier that refers to the context in which a function is executed. Its value is determined dynamically at runtime and can vary depending on how the function is called or invoked. The purpose of the this keyword is to provide access to the object that is currently being operated upon or to which a method belongs.
+
+The behavior of this can be a little complex and can differ depending on the context in which it is used. Here are some common use cases and how this behaves in each:
+
+1.Global scope: When this is used in the global scope (outside of any function), it refers to the global object. In web browsers, the global object is usually window.
+
+2.Function context: When this is used inside a regular function (not an arrow function), its value is determined by how the function is called:
+
+a. Function called as a method: If a function is called as a method of an object, this refers to the object itself. For example:
+
+javascript
+
+var person = {
+  name: "John",
+  sayHello: function() {
+    console.log("Hello, my name is " + this.name);
+  }
+};
+
+person.sayHello(); // Output: Hello, my name is John
+b. Function called as a standalone function: If a function is called without any context or as a standalone function, this refers to the global object (window in a browser environment) or undefined in strict mode.
+
+c. Function called with new keyword: When a function is called with the new keyword to create a new instance of an object, this refers to the newly created object.
+
+3.Event handlers: When this is used within an event handler function, it typically refers to the element that triggered the event.
+
+4.Explicitly setting this: You can also explicitly set the value of this using methods like call(), apply(), or bind(). These methods allow you to specify the object on which the function should be invoked and therefore determine the value of this.
+
+Understanding and correctly using the this keyword is important for working with object-oriented JavaScript, especially when defining methods and dealing with different execution contexts. It allows you to access and manipulate the properties and behavior of the current object dynamically.

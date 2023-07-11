@@ -1,0 +1,21 @@
+/*
+4 Explain OOPS ?
+*/
+Ans:-
+OOPS (Object-Oriented Programming) is a programming paradigm that organizes code into reusable and modular objects, each representing an entity or concept in the problem domain. It is based on the principles of encapsulation, inheritance, polymorphism, and abstraction. OOPS allows for structuring code in a way that models real-world objects and their interactions.
+
+The key concepts of OOPS are:
+
+1.Classes and Objects: A class is a blueprint or template that defines the properties (attributes) and behaviors (methods) of objects. An object is an instance of a class that encapsulates data and behavior.
+
+2.Encapsulation: Encapsulation is the bundling of data and related methods within a class, hiding the internal details and providing a public interface for interacting with the object. It allows for data abstraction and protects the integrity of the object.
+
+3.Inheritance: Inheritance is a mechanism that enables a class to inherit properties and methods from another class, known as the superclass or base class. It promotes code reuse and supports the creation of hierarchical relationships between classes.
+
+4.Polymorphism: Polymorphism allows objects of different classes to be treated as objects of a common superclass. It enables methods to be implemented in different ways in derived classes while maintaining a consistent interface. Polymorphism helps achieve code flexibility and extensibility.
+
+5.Abstraction: Abstraction focuses on defining essential features and behaviors of an object while hiding unnecessary details. It allows programmers to work with high-level concepts and models, making code more manageable and easier to understand.
+
+Benefits of OOPS include code reusability, modularity, maintainability, and scalability. By encapsulating data and behavior, OOPS promotes code organization, reduces code duplication, and enhances code readability. It also facilitates collaboration and team development by providing a standardized approach to building software systems.
+
+In languages such as JavaScript, Java, C++, and Python, OOPS is a widely used paradigm, and many frameworks and libraries are built based on OOPS principles. It provides a structured and efficient way to design and develop complex applications by modeling real-world entities and their relationships.

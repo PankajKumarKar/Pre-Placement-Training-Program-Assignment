@@ -1,0 +1,24 @@
+/*
+7  Whats Inheritance and Purpose of it?
+*/
+Ans:-
+Inheritance is a fundamental concept in object-oriented programming (OOP) that allows a class to inherit properties and behaviors from another class. It enables the creation of a hierarchical relationship between classes, where a derived class (also known as a subclass or child class) inherits characteristics from a base class (also known as a superclass or parent class). The purpose of inheritance is to promote code reuse, modularity, and the modeling of real-world relationships.
+
+Here are the key aspects and purposes of inheritance:
+
+1.Code Reusability: Inheritance promotes code reuse by allowing derived classes to inherit the properties and behaviors of the base class. Common attributes and methods defined in the base class can be reused in multiple derived classes without duplicating code. This reduces redundancy and improves the maintainability of the codebase.
+
+2.Modularity and Organization: Inheritance helps in organizing and structuring code in a modular manner. Related classes can be grouped together, with shared characteristics defined in a common base class. This promotes a logical and hierarchical structure that is easier to understand and navigate.
+
+3.Code Extensibility: Derived classes have the ability to extend or specialize the behavior inherited from the base class. They can add new attributes and methods, override existing methods, or introduce new behavior specific to the derived class. Inheritance allows for customization and refinement of functionality while maintaining a common interface defined by the base class.
+
+4.Polymorphism: Inheritance is closely linked to polymorphism, which allows objects of different classes to be treated as objects of a common superclass. Inherited methods can be overridden in derived classes to provide specialized behavior. This enables polymorphic behavior, where objects of different classes can be used interchangeably, providing flexibility and extensibility in the code.
+
+5.Model Real-World Relationships: Inheritance is often used to model relationships that exist in the real world. For example, in a system representing animals, you might have a base class called Animal with properties and behaviors common to all animals, and derived classes such as Cat, Dog, and Bird that inherit from Animal and add specific characteristics unique to each type of animal.
+
+By leveraging inheritance, developers can create a hierarchical structure that promotes code reuse, modularity, and extensibility. It allows for a more intuitive representation of real-world relationships and provides a solid foundation for building complex and scalable applications.
+
+
+
+
+

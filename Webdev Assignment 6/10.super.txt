@@ -1,0 +1,39 @@
+/*
+.10 What’s Super Keyword & What it does?
+*/
+Ans:-
+n JavaScript, the super keyword is used to call and access the parent class's properties and methods from within a subclass. It provides a way to reference the superclass (parent class) and invoke its constructor or methods. The super keyword can be used in two contexts: within a constructor and within a method.
+
+1.Within a Constructor:
+When a subclass has its own constructor, the super() method must be called inside the constructor of the subclass to invoke the constructor of the superclass. This ensures that the superclass's initialization code is executed before the subclass's initialization code. The super() method takes any necessary arguments that need to be passed to the parent class's constructor. Here's an example:
+
+JavaScript
+
+class Child extends Parent {
+  constructor(name, age) {
+    super(name); // Call the Parent class's constructor with the name argument
+    this.age = age;
+  }
+}
+In this example, the super(name) line calls the Parent class's constructor and passes the name argument to it.
+
+2.Within a Method:
+The super keyword can also be used within a method of a subclass to access and invoke a method of the parent class with the same name. This allows the subclass to extend or override the behavior of the parent class's method while still being able to access and use it. Here's an example:
+
+javascript
+
+class Parent {
+  greet() {
+    console.log("Hello, I am the parent.");
+  }
+}
+
+class Child extends Parent {
+  greet() {
+    super.greet(); // Call the greet() method of the Parent class
+    console.log("And I am the child.");
+  }
+}
+In this example, the super.greet() line within the Child class's greet() method calls the greet() method of the Parent class. This allows the child class to extend the behavior of the parent class's greet() method and add its own functionality.
+
+The super keyword is essential in maintaining the inheritance chain and allowing subclasses to access and leverage the functionality of their parent classes. It ensures proper initialization of superclass properties and methods within subclasses and allows for method overriding with the ability to invoke the parent class's method.
