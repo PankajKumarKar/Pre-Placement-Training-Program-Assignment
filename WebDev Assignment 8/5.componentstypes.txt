@@ -1,0 +1,41 @@
+/*
+5 Difference between class & function based component?
+*/
+Ans:-
+The main difference between class-based and function-based components in React lies in how they are defined and the features they provide.
+
+1.Definition Syntax:
+
+Class-based Components: Class components are defined as ES6 classes that extend the React.Component base class. They have a render() method where the UI is defined. Other lifecycle methods like componentDidMount(), componentDidUpdate(), etc., can also be defined.
+
+Function-based Components: Function components are defined as JavaScript functions that receive props as arguments and return JSX (JavaScript XML) to describe the UI. They are also known as functional components or stateless components.
+
+
+2.State Management:
+
+Class-based Components: Class components have their own internal state management. They can define and update state using the this.state object and the setState() method. State changes trigger re-rendering of the component and its child components.
+
+Function-based Components: Function components are stateless by default. They don't have their own internal state. However, with the introduction of React Hooks (introduced in React 16.8), function components can now manage state and use other React features with the help of hooks like useState, useEffect, etc.
+
+
+3.Lifecycle Methods:
+
+Class-based Components: Class components provide access to the lifecycle methods like componentDidMount(), componentDidUpdate(), componentWillUnmount(), etc. These methods allow you to perform actions at specific points in the component's lifecycle.
+
+Function-based Components: Function components can utilize the useEffect hook to perform side effects and mimic the behavior of lifecycle methods. The useEffect hook provides a way to perform actions on component mount, update, and unmount.
+
+
+4.Code Complexity:
+
+Class-based Components: Class components tend to be more verbose and require a certain amount of boilerplate code. They can be more complex and harder to read, especially when dealing with larger components or complex component hierarchies.
+
+Function-based Components: Function components are generally simpler and more concise. They have a cleaner syntax and are easier to read and understand. They promote code reusability and separation of concerns.
+
+
+5.Performance:
+
+Class-based Components: Class components can be less performant due to the overhead of creating and managing class instances. They can also trigger unnecessary re-renders if not optimized properly.
+
+Function-based Components: Function components are generally more performant, especially when using React Hooks. With the use of memoization techniques and hooks like useMemo and useCallback, unnecessary re-renders can be prevented, resulting in better performance.
+
+Overall, the decision between using a class-based or function-based component depends on the specific requirements of your application. Class components are suitable for complex state management and lifecycle needs, while function components with hooks provide simplicity, reusability, and improved performance. React Hooks have made function components the preferred choice for most scenarios, but class components are still valid and necessary in certain cases, especially when working with older codebases or integrating with third-party libraries.

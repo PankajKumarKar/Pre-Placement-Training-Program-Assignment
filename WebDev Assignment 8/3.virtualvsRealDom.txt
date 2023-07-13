@@ -1,0 +1,27 @@
+/*
+3 Difference between Virtual Dom vs Real Dom?
+*/
+Ans:-
+The main difference between the Virtual DOM and the real DOM (Document Object Model) lies in how they are updated and manipulated.
+
+1.Updating Process:
+Real DOM: The real DOM directly represents the current state of the HTML document in the browser. Whenever there is a change in the data or state of a web application, the entire real DOM tree needs to be updated. This involves modifying, adding, or removing elements and attributes in the actual DOM tree.
+
+Virtual DOM: The Virtual DOM is an abstraction or a lightweight copy of the real DOM that React maintains in memory. When there is a change in the data or state of a component, React updates the Virtual DOM instead of directly manipulating the real DOM. React then performs a process called "diffing" to determine the minimal set of changes required to update the real DOM efficiently.
+
+2.DOM Manipulation Efficiency:
+Real DOM: Manipulating the real DOM can be an expensive operation because every change triggers a reflow and repaint process, which can be slow and affect the overall performance of the web application, especially when dealing with large or complex UIs.
+Virtual DOM: The Virtual DOM allows React to batch and optimize DOM updates. By comparing the previous Virtual DOM with the updated Virtual DOM, React determines the minimal set of changes required to update the real DOM. This selective update approach minimizes the number of actual DOM manipulations and improves performance.
+
+3.Performance Impact:
+Real DOM: Directly manipulating the real DOM can have performance implications, especially when there are frequent updates or complex UI interactions. The reflow and repaint process can cause visual jank and slow down the application.
+
+Virtual DOM: The Virtual DOM optimization in React helps minimize the performance impact. By updating the Virtual DOM first and then applying selective changes to the real DOM, React reduces the number of reflows and repaints, resulting in a smoother and more efficient rendering process.
+
+4.Re-rendering Process:
+Real DOM: In the real DOM, when an element or its parent is updated, the browser re-renders the entire affected subtree of the DOM, including all child elements and their attributes, regardless of whether they actually changed or not.
+
+Virtual DOM: In the Virtual DOM, React compares the previous Virtual DOM with the updated Virtual DOM and identifies the specific elements that have changed. React then only updates those specific elements in the real DOM, minimizing the amount of work required to re-render the UI.
+
+In summary, the Virtual DOM is a concept and technique used by React to optimize the updating and 
+.rendering of components. It provides a lightweight copy of the real DOM that allows React to efficiently determine and apply the minimal set of changes required to update the actual DOM. This optimization improves performance, reduces reflows and repaints, and leads to a smoother user experience compared to directly manipulating the entire real DOM.

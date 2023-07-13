@@ -1,0 +1,6 @@
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #dce7f0;
+}

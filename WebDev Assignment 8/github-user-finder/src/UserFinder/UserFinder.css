@@ -1,0 +1,65 @@
+form {
+  display: flex;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  column-gap: 1rem;
+}
+
+input {
+  padding: 0.8rem 2rem;
+  font-size: 25px;
+}
+
+button {
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  background-color: #31318d;
+  color: #ffffff;
+  font-weight: 600;
+}
+img {
+  max-width: 20rem;
+  max-height: 15rem;
+  border-radius: 2rem;
+  object-fit: cover;
+  margin-bottom: 2rem;
+}
+.searchResult {
+  width: 60rem;
+  width: 60rem;
+  background-color: #17175f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 2.5rem;
+  color: #ffffff;
+  margin: 0 auto;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.3rem;
+}
+
+.first,
+.second,
+.third {
+  display: flex;
+  column-gap: 1rem;
+  font-size: 1.4rem;
+}
+
+.third div,
+.first div,
+.second div {
+  width: 20rem;
+  min-height: 3rem;
+  background-color: #6e6eeb;
+  padding: 0.6rem 2rem;
+}

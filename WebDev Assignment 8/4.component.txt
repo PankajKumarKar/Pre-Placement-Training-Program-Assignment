@@ -1,0 +1,80 @@
+/*
+4 Whats component? Types of component?
+*/
+Ans:-
+In React, a component is a reusable and self-contained piece of code that encapsulates the logic and UI (User Interface) elements. Components are the building blocks of React applications, allowing you to create modular and maintainable code.
+
+There are two main types of components in React:
+
+1.Functional Components (Stateless Components):
+
+Functional components are simple JavaScript functions that receive props (properties) as arguments and return JSX (JavaScript XML) to describe the UI.
+They are also referred to as stateless components because they don't have their own internal state management.
+Functional components are easier to read, test, and understand. They are recommended for most use cases.
+Example of a functional component:
+
+jsx
+
+import React from 'react';
+
+const MyComponent = (props) => {
+  return <div>{props.message}</div>;
+};
+
+export default MyComponent;
+
+2.Class Components (Stateful Components):
+Class components are JavaScript ES6 classes that extend the React.Component class. They have more features and capabilities than functional components.
+Class components have their own internal state and can manage lifecycle methods.
+They are suitable for complex logic, managing state, handling lifecycle events, and integrating with other JavaScript libraries.
+Example of a class component:
+
+jsx
+
+import React, { Component } from 'react';
+
+class MyComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0,
+    };
+  }
+
+  render() {
+    return <div>Count: {this.state.count}</div>;
+  }
+}
+
+export default MyComponent;
+
+In addition to these main types, there are also other types of components used in React:
+
+1.Pure Components:
+Pure components are class components that automatically optimize rendering by performing shallow equality checks on props and state.
+They are useful when you want to prevent unnecessary re-rendering of components.
+Pure components can be created by extending the React.PureComponent class instead of React.Component.
+
+2.Higher-Order Components (HOCs):
+Higher-Order Components are functions that take a component as an argument and return an enhanced version of that component with additional functionality.
+HOCs are used for code reuse, cross-cutting concerns, and sharing common functionality among components.
+Example of a Higher-Order Component:
+
+jsx
+
+import React from 'react';
+
+const withLogger = (WrappedComponent) => {
+  return class extends React.Component {
+    componentDidMount() {
+      console.log('Component mounted');
+    }
+
+    render() {
+      return <WrappedComponent {...this.props} />;
+    }
+  };
+};
+
+export default withLogger;
+These are the main types of components in React. Choosing between functional and class components depends on the specific needs of your application. Functional components are recommended for most cases, while class components provide additional features for more complex scenarios.

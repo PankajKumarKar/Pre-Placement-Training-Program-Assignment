@@ -1,0 +1,25 @@
+.product {
+  width: 300px;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #2b2626;
+  color: #ffffff;
+  border-radius: 1rem;
+}
+
+.product img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.product button {
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.9rem;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+}
